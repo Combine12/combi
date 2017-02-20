@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://joezeng.github.io/ytmnd/bonetrousle-getting-faster/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Seems you've taken a wrong turn...</title>
+	<link rel="stylesheet" href="http://combine12.github.io/404resources/gaster.css">
+	<script src="http://combine12.github.io/404resources/howler.js"></script>
+	<script src="http://combine12.github.io/404resources/404.js"></script>
+</head>
+
+
+<body>
+
+
+
+<center><img id="gaster" src="http://combine12.github.io/404resources/mysteryman.png" onclick=changeImage2() opacity="1"></center>
+
+
+
+<script>
+function changeImage() {
+   	
+}
+</script>
+<script>
+
+function imageOpac() {
+	var image = document.getElementById('gaster');
+	image.style.opacity  = image.style.opacity - 0.01;
+	//alert(image.style.opacity)
+	if (image.style.opacity <= 0) {
+    	clearInterval(inter);
+ 	}
+}
+</script>
+
+<script>
+function changeImage2() {
+    var image = document.getElementById('gaster');
+    var spooky = new Howl({
+		src: ["http://combine12.github.io/404resources/disappear.wav"],
+		loop: false,
+		volume: 1,
+	});
+	spooky.play()
+
+    image.src = "http://combine12.github.io/404resources/mysteryman2.png";
+    image.style.opacity = 1
+    //alert(image.style.opacity)
+    inter = setInterval(imageOpac, 1)
+}
+</script>
+
+<br>
+<center><div id="text">404</div></center>
+
+
+
+</body>
+</html>
