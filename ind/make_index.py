@@ -87,11 +87,6 @@ def fun(dir,rootdir):
     f = open(dir+'/index.html','w')
     print(Template(INDEX_TEMPLATE).render(dirnames=dirnames,filenames=filenames, header=dir,ROOTDIR=rootdir,time=time.ctime(os.path.getctime(dir))),file=f)
     f.close()
-    for subdir in dirnames:
-        try:
-            fun(dir+subdir+"/",rootdir+'../')
-        except:
-            pass
 
 def main():
     parser = argparse.ArgumentParser()
